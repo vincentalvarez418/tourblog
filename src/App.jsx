@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Content from "./components/Content";
 import Day1 from "./components/days/day1";
-import Day2 from "./components/days/cay2";
+import Day2 from "./components/days/day2";
 import Day3 from "./components/days/day3";
 import Day4 from "./components/days/day4";
 import Day5 from "./components/days/day5";
