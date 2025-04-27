@@ -28,3 +28,17 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media (max-width: 767px) {
+  .header {
+    margin-top: 30%;
+  }
+
+  .header-image {
+    margin-top: 20px;
+  }
+
+  .header p {
+    margin-top: 30px;
+  }
+}
