@@ -105,4 +105,9 @@
   .logo-text {
     display: none;
   }
+
+  .nav-links a, 
+  .nav-links button {
+    font-size: 14px;
+  }
 }
