@@ -1,6 +1,4 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
-import React from "react";
 import day41 from "./dayimages/4-1.jpg";
 import day42 from "./dayimages/4-2.jpg";
 import day43 from "./dayimages/4-3.jpg";
@@ -10,8 +8,18 @@ import day46 from "./dayimages/4-6.jpg";
 import day47 from "./dayimages/4-7.jpg";
 import day48 from "./dayimages/4-8.jpg";
 import "./day.css";
+import { useParams, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
 
 const Day4 = () => {
+
+  const { day } = useParams();
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="day-page">
       <div className="day-content">
@@ -20,7 +28,7 @@ const Day4 = () => {
           <hr />
           <br />
           <p>
-          Hytec Power, Incorporated is an innovative company providing products and services for both academe and industry. It is the leading industrial and educational solutions provider in the Philippines
+            Hytec Power, Incorporated is an innovative company providing products and services for both academe and industry. It is the leading industrial and educational solutions provider in the Philippines
           </p>
         </div>
       </div>
@@ -31,9 +39,9 @@ const Day4 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day41} alt="Subic Bay View 1" effect="blur" />
+          <LazyLoadImage src={day41} alt="Electrical Switchboard and E-learning Setup" effect="blur" />
           <p className="image-description">
-          This image features an electrical switchboard and E-learning hardware setup, highlighting essential tools used in modern technical education. Various components such as switches, circuit breakers, and wiring panels are arranged neatly, while nearby cases house robotic equipment, showcasing the integration of automation in hands-on learning environments.
+            Captured in this image is a modern electrical switchboard accompanied by a specialized E-learning training system. Various technical components such as switches, circuit breakers, and intricately arranged wiring panels create a realistic training environment. Beside it, secure cases filled with robotic hardware hint at hands-on learning modules that fuse automation and education. The scene offers a glimpse into how Hytec PH enables institutions to deliver cutting-edge, industry-aligned skills training.
           </p>
         </div>
       </div>
@@ -44,9 +52,9 @@ const Day4 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day42} alt="Subic Bay Streets" effect="blur" />
+          <LazyLoadImage src={day42} alt="Control Console Connected to PC" effect="blur" />
           <p className="image-description">
-          This image shows a PC that is connected to an electric control console, designed for robotics applications.
+            This setup showcases a desktop PC intricately connected to an electric control console tailored for robotics and programming education. The visual layout emphasizes how theory and practical application come together, allowing students or trainees to simulate, test, and troubleshoot automation processes in real-time. It’s a powerful reminder of how integrated systems are revolutionizing technical training.
           </p>
         </div>
       </div>
@@ -57,9 +65,9 @@ const Day4 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day43} alt="Subic Bay Beach" effect="blur" />
+          <LazyLoadImage src={day43} alt="Voltage Regulation and Monitoring Station" effect="blur" />
           <p className="image-description">
-          This image showcases a sophisticated setup featuring interconnected components, including a pressure monitor for voltage regulation and an array of wires. Designed for industrial and IT applications, this system exemplifies the cutting-edge solutions provided by Hytec Power, a leading company in the Philippines.
+            Highlighted here is a highly detailed technical station filled with dials, gauges, and pressure monitors used for voltage and system regulation. The setup, complete with neatly routed wires and connected sensors, reflects Hytec’s commitment to producing real-world industrial simulations. These systems aren't just teaching aids—they're bridges that connect learners directly to the demands of modern engineering and automation industries.
           </p>
         </div>
       </div>
@@ -70,9 +78,9 @@ const Day4 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day44} alt="Subic Bay Port" effect="blur" />
+          <LazyLoadImage src={day44} alt="IT Module Control System" effect="blur" />
           <p className="image-description">
-          Hytec Power continues to lead the way in providing innovative solutions for both academic and industrial sectors in the Philippines. Their latest offering includes a range of modules designed to control IT devices with precision and efficiency. Among these are the Digger Module, which enhances data excavation capabilities, and the Button Module, which simplifies user interaction. These modules, along with many others, form a comprehensive system tailored to meet the dynamic needs of modern IT environments.
+            This image offers a peek into the modular systems developed by Hytec to simplify complex IT operations. Seen here are components like the Digger Module, used for efficient data handling, and the Button Module, which enhances interactive functions. These modules form part of a broader control system designed to give users intuitive command over IT hardware, offering flexibility and precision to instructors and learners alike.
           </p>
         </div>
       </div>
@@ -83,9 +91,9 @@ const Day4 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day45} alt="Subic Bay Freeport" effect="blur" />
+          <LazyLoadImage src={day45} alt="Electrical Trainer Suitcase" effect="blur" />
           <p className="image-description">
-          Hytec Power showcases a portable suitcase containing an electrical trainer alongside custom-built projects crafted by previous students. This innovative setup reflects their commitment to hands-on learning and fostering creativity in technical education.
+            A unique educational toolkit is featured here—a rugged suitcase packed with electrical trainer components. Alongside it are prototype builds from students who have gone through Hytec's training programs. This setup not only allows for mobile learning but also showcases the creativity and technical skills honed through hands-on experimentation and guided instruction.
           </p>
         </div>
       </div>
@@ -96,13 +104,9 @@ const Day4 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage
-            src={day46}
-            alt="Subic Bay Historical Site"
-            effect="blur"
-          />
+          <LazyLoadImage src={day46} alt="Medical Prototype by Hytec" effect="blur" />
           <p className="image-description">
-          Hytec Power is exploring innovative prototypes for medical applications. These devices, designed with precision and advanced technology, aim to enhance healthcare solutions and improve patient outcomes. Their commitment to innovation reflects their dedication to addressing critical needs in the medical field.
+            In a promising stride toward healthcare innovation, this image captures one of Hytec’s experimental medical devices. With a clean, ergonomic design and embedded sensors, the prototype is crafted to support diagnostics and monitoring. It's an exciting indication of how Hytec is diversifying its reach—from engineering labs to hospital wards—pushing technology to serve humanity more effectively.
           </p>
         </div>
       </div>
@@ -113,13 +117,9 @@ const Day4 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage
-            src={day47}
-            alt="Subic Bay Adventure Park"
-            effect="blur"
-          />
+          <LazyLoadImage src={day47} alt="LAN Training and Prototype Equipment" effect="blur" />
           <p className="image-description">
-          Hytec Power's offerings include advanced LAN trainers, HDD storage devices, and prototype camera-like equipment. These tools are designed to enhance IT training and development, showcasing their dedication to providing cutting-edge solutions for both educational and industrial applications.
+            This setup features a compact yet powerful collection of LAN trainers, data storage drives, and a prototype surveillance device. It embodies Hytec’s mission to keep learning environments aligned with industry-grade tools. Each piece of hardware reflects their philosophy of exposing students to the same equipment used in professional IT and networking fields, ensuring smooth transitions from classroom to career.
           </p>
         </div>
       </div>
@@ -130,9 +130,9 @@ const Day4 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day48} alt="Subic Bay Sunset" effect="blur" />
+          <LazyLoadImage src={day48} alt="Weather Monitoring Device" effect="blur" />
           <p className="image-description">
-          Hytec Power features a weather machine designed for precise environmental monitoring and analysis. This innovative device underscores their commitment to integrating advanced technology for both academic and industrial applications. It serves as a valuable tool for studying weather patterns and enhancing climate-related research.
+            Pictured here is a fully integrated weather monitoring system developed by Hytec for educational and research use. With its array of sensors and data logging capabilities, it allows users to observe environmental changes in real-time. This technology is a testament to Hytec’s vision of merging science, sustainability, and education—providing tools that inspire future climatologists, engineers, and innovators.
           </p>
         </div>
       </div>

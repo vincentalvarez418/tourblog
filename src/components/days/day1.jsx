@@ -1,4 +1,3 @@
-import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component"; 
 import day11 from "./dayimages/1-1.jpg";
 import day12 from "./dayimages/1-2.jpg";
@@ -10,7 +9,18 @@ import day17 from "./dayimages/1-7.jpg";
 import day18 from "./dayimages/1-8.jpg";
 import "./day.css";
 
+import { useParams, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+
 const Day1 = () => {
+
+  const { day } = useParams();
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="day-page">
       <div className="day-content">
@@ -19,7 +29,7 @@ const Day1 = () => {
           <hr />
           <br />
           <p>
-            Manila, the capital of the Philippines, is a city that blends old-world charm with modern-day vibrancy. Sitting on the west coast of Luzon, it’s not just a bustling urban center but a place filled with stories from the past. Walking through Manila, you’ll find a mix of Spanish-era buildings, high-rise buildings, and colorful street markets, creating a unique atmosphere.
+            Manila, the bustling capital of the Philippines, is an exciting blend of history, culture, and modernity. Located along the western coast of Luzon, the city is filled with diverse influences, from its Spanish colonial heritage to its vibrant street life. As you explore Manila, you’ll be immersed in the energy of its busy streets, where old and new come together in perfect harmony. From historical landmarks to towering skyscrapers, the city’s charm lies in its ability to offer something for every type of traveler.
           </p>
         </div>
       </div>
@@ -33,12 +43,12 @@ const Day1 = () => {
           <LazyLoadImage
             src={day11}
             alt="City Exploration"
-            effect="blur" // Lazy loading with blur effect
+            effect="blur"
             height="auto"
-            width="100%" // Ensure the image scales well
+            width="100%"
           />
           <p className="image-description">
-            The image captures a dynamic view of Manila's streets, as seen from the perspective of a street-level vehicle. The scene is filled with the energy of the city, with the bustling traffic of jeepneys, motorcycles, and cars weaving through the roads. The streets are lined with a mix of old and new buildings, showcasing the contrast between Manila's rich colonial past and its modern urban growth.
+            This vibrant image captures the heart of Manila’s street life, as seen from a vehicle weaving through the bustling city. The lively traffic of jeepneys, motorcycles, and cars creates an almost choreographed dance as they move along the busy roads. The contrast between the modern skyscrapers and the historical buildings creates a unique cityscape that is unmistakably Manila. The scene is filled with energy, offering a snapshot of the fast-paced yet colorful life that characterizes the city.
           </p>
         </div>
       </div>
@@ -57,7 +67,7 @@ const Day1 = () => {
             width="100%"
           />
           <p className="image-description">
-            A view of the city from the streets, featuring lush trees and towering buildings. The scene captures the contrast between the greenery and the high-rise structures, showcasing the blend of nature and urban development in Manila.
+            In this shot, the city’s green spaces stand in contrast to the urban jungle of towering buildings. The lush trees provide a calming balance to the surrounding high-rise structures, highlighting the harmonious coexistence of nature and urban development in Manila. It’s a reminder that even in a sprawling metropolis, nature can find a way to thrive alongside modern life, offering an oasis of greenery amid the concrete and steel.
           </p>
         </div>
       </div>
@@ -76,7 +86,7 @@ const Day1 = () => {
             width="100%"
           />
           <p className="image-description">
-            A peaceful view of **Rizal Park**, one of Manila's most iconic landmarks. The image showcases the expansive green spaces, well-manicured gardens, and towering monuments dedicated to the Philippine national hero, José Rizal. The park is a blend of nature and history, offering a serene escape in the heart of the city.
+            This tranquil scene from Rizal Park offers a peaceful respite in the heart of Manila. The park, dedicated to the national hero, José Rizal, is a vast green space adorned with beautifully manicured gardens and towering monuments. Here, locals and tourists alike come to unwind, reflect, or simply enjoy the natural beauty that contrasts with the surrounding city. The park represents not only a place of relaxation but also a symbol of national pride and history.
           </p>
         </div>
       </div>
@@ -95,7 +105,7 @@ const Day1 = () => {
             width="100%"
           />
           <p className="image-description">
-            The image shows the grand entrance to **Fort Santiago**, a historic site in Manila. The gate, with its strong stone walls and old-world charm, stands as a reminder of the country’s colonial past. The fort, once a military stronghold, now offers a glimpse into Philippine history, with its preserved architecture and surrounding gardens.
+            The grand entrance to Fort Santiago, a historic fort built during the Spanish colonial era, evokes a sense of stepping back in time. The sturdy stone walls of the gate, coupled with the ancient architecture of the fort, tell the stories of a bygone era. Fort Santiago is one of the most significant historical sites in Manila, offering visitors a glimpse into the country's turbulent past. The fort has witnessed many important events in Philippine history and remains a testament to the resilience of the Filipino people.
           </p>
         </div>
       </div>
@@ -114,7 +124,7 @@ const Day1 = () => {
             width="100%"
           />
           <p className="image-description">
-            A beautiful view of the city’s skyline, taken from inside **Fort Santiago**. The image captures the contrast between the historic fort and the modern buildings of Manila, with a serene body of water in the foreground, adding to the peaceful ambiance of the scene. The tall buildings rise in the distance, showcasing Manila's modern urban landscape.
+            From the ramparts of Fort Santiago, the view of Manila is both striking and surreal. The fort’s historical stone walls stand in stark contrast to the modern glass and steel structures of the city’s skyline. The tranquil body of water in the foreground adds a serene touch to the view, offering a peaceful juxtaposition to the lively city beyond. The image perfectly captures the fusion of the old and new, with the fort acting as a symbol of history amid the bustling metropolis.
           </p>
         </div>
       </div>
@@ -133,7 +143,7 @@ const Day1 = () => {
             width="100%"
           />
           <p className="image-description">
-            This image takes you deep inside Fort Santiago’s underground tunnels, revealing remnants of a dark and painful past. The tunnels, once used for confinement and torture during the colonial period, stand as a stark reminder of the struggles endured by countless prisoners. The stone walls echo the painful history, showing the harsh reality of the struggles faced by Filipinos under foreign rule.
+            A haunting look into the underground tunnels of Fort Santiago, where the remnants of a dark and painful chapter in Philippine history still echo. These tunnels were once used to house prisoners, many of whom endured unimaginable suffering under colonial rule. The stone walls, now silent, tell stories of resilience and hardship. The chilling atmosphere of these tunnels serves as a somber reminder of the brutalities faced by those who fought for freedom.
           </p>
         </div>
       </div>
@@ -152,7 +162,7 @@ const Day1 = () => {
             width="100%"
           />
           <p className="image-description">
-            The Globe at Mall of Asia (MOA) is an iconic landmark in Pasay City, Manila. This large, rotating globe is one of the most recognizable structures in the area, often symbolizing the global connection of the Philippines to the rest of the world. The vibrant colors and unique design make it a perfect spot for photos and a popular attraction for locals and tourists alike.
+            The iconic Globe at Mall of Asia stands tall in the heart of Pasay City, symbolizing the Philippines’ connection to the global stage. The giant rotating globe, adorned with colorful lights, is a favorite landmark and a symbol of Manila’s modernity and progress. People gather here to take photos, enjoy the surrounding area, and be reminded of the country’s place in the world. It’s a perfect blend of art, design, and technology, making it one of Manila’s must-see attractions.
           </p>
         </div>
       </div>
@@ -171,7 +181,7 @@ const Day1 = () => {
             width="100%"
           />
           <p className="image-description">
-            This image shows the Ferris Wheel near Mall of Asia, one of the largest in the country. The Ferris wheel stands tall against the Manila skyline and offers breathtaking views of Manila Bay. It is a popular attraction for tourists, providing a unique experience of seeing the city from above, especially during sunset when the sky reflects vibrant colors over the water.
+            The towering Ferris Wheel near Mall of Asia offers one of the most breathtaking views of Manila Bay. As it turns against the backdrop of the city skyline, visitors are treated to panoramic views of the water, the city, and the distant mountains. The Ferris wheel is a favorite among tourists, especially during sunset when the sky is painted in vibrant hues of orange and pink, casting a magical glow over the bay. It’s a unique and unforgettable experience that captures the beauty of Manila from above.
           </p>
         </div>
       </div>
