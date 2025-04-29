@@ -1,6 +1,4 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
-import React from "react";
 import day31 from "./dayimages/3-1.jpg";
 import day32 from "./dayimages/3-2.jpg";
 import day33 from "./dayimages/3-3.jpg";
@@ -10,8 +8,18 @@ import day36 from "./dayimages/3-6.jpg";
 import day37 from "./dayimages/3-7.jpg";
 import day38 from "./dayimages/3-8.jpg";
 import "./day.css";
+import { useParams, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
 
 const Day3 = () => {
+
+  const { day } = useParams();
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="day-page">
       <div className="day-content">
@@ -20,9 +28,7 @@ const Day3 = () => {
           <hr />
           <br />
           <p>
-            Located right across Quezon Park, the National Museum of the
-            Philippines stands as a gateway to the country’s rich heritage,
-            also featuring the Manuel L. Quezon legacy.
+            The National Museum of the Philippines, located right across from Quezon Park, is a true cultural treasure chest, preserving and showcasing the country's vast history. The museum is a tribute to Filipino heritage, with exhibits that not only celebrate the nation's rich past but also highlight the legacy of Manuel L. Quezon, the second President of the Philippines, who played a pivotal role in the nation's development.
           </p>
         </div>
       </div>
@@ -33,9 +39,9 @@ const Day3 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day31} alt="Subic Bay View 1" effect="blur" />
+          <LazyLoadImage src={day31} alt="National Museum Entrance" effect="blur" />
           <p className="image-description">
-          The grand entrance of the National Museum of the Philippines stands proudly with its tall neoclassical columns and wide stone steps.
+            The majestic entrance to the National Museum of the Philippines stands as a symbol of its grandeur and historical importance. The neoclassical columns and sweeping stone steps lead visitors into a world where Filipino culture and history are preserved and shared with the public, inviting all to explore the stories that have shaped the nation.
           </p>
         </div>
       </div>
@@ -46,9 +52,9 @@ const Day3 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day32} alt="Subic Bay Streets" effect="blur" />
+          <LazyLoadImage src={day32} alt="National Museum Atrium" effect="blur" />
           <p className="image-description">
-          Inside the National Museum, a sleek and modern elevator-like structure rises within the grand atrium. Its glass walls reflect the surrounding architectural details, offering a striking contrast between the museum’s classic design and contemporary touches.
+            Inside the National Museum, the atrium offers a striking contrast between classical architecture and modern design. A sleek, elevator-like structure with glass walls rises in the middle of the space, reflecting the museum’s classical surroundings. This juxtaposition of old and new symbolizes the ever-evolving nature of Filipino culture and its ability to honor both its traditions and its future.
           </p>
         </div>
       </div>
@@ -59,9 +65,9 @@ const Day3 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day33} alt="Subic Bay Beach" effect="blur" />
+          <LazyLoadImage src={day33} alt="National Museum Exhibits" effect="blur" />
           <p className="image-description">
-          The interior of the National Museum is a captivating blend of elegance and history. Spacious galleries with high ceilings showcase an array of artistic and cultural exhibits, from historical artifacts to contemporary masterpieces.
+            As you step further into the museum, you are greeted by spacious galleries that are a feast for the eyes. High ceilings and well-lit spaces showcase a wide range of exhibits, from the ancient artifacts that tell the story of the Philippines' early history to contemporary art that reflects the dynamic culture of today. The museum’s design invites contemplation, allowing visitors to experience history through a visual and emotional journey.
           </p>
         </div>
       </div>
@@ -72,9 +78,9 @@ const Day3 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day34} alt="Subic Bay Port" effect="blur" />
+          <LazyLoadImage src={day34} alt="Spiral Staircase in Museum" effect="blur" />
           <p className="image-description">
-          The semi-spiral staircase, seen from above, offers a stunning architectural view. Its elegant curves lead visitors from one level to another, with the sleek design emphasizing both functionality and beauty.
+            The semi-spiral staircase is not only a functional feature of the National Museum but also an architectural marvel. As you look down from above, the elegant curves of the staircase create a mesmerizing visual flow, leading visitors effortlessly from one level to another. This graceful design enhances the visitor experience, encouraging exploration while maintaining a sense of grandeur and sophistication.
           </p>
         </div>
       </div>
@@ -85,9 +91,9 @@ const Day3 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day35} alt="Subic Bay Freeport" effect="blur" />
+          <LazyLoadImage src={day35} alt="Manuel L. Quezon's Office" effect="blur" />
           <p className="image-description">
-          This image showcases the former office of Manuel L. Quezon, the first president of the Commonwealth of the Philippines. Preserved to reflect the era, the office exudes a sense of history, with its vintage furniture and carefully curated artifacts.
+            This image showcases the preserved office of Manuel L. Quezon, the first President of the Commonwealth of the Philippines. Stepping into this space is like stepping back in time. The vintage furniture, historical decor, and carefully curated artifacts provide a glimpse into the life of one of the Philippines' most influential leaders, allowing visitors to feel a personal connection with the nation's political history.
           </p>
         </div>
       </div>
@@ -98,13 +104,9 @@ const Day3 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage
-            src={day36}
-            alt="Subic Bay Historical Site"
-            effect="blur"
-          />
+          <LazyLoadImage src={day36} alt="Quezon Park Pathway" effect="blur" />
           <p className="image-description">
-          This image features a scenic pathway lined with multiple flags, likely located near Quezon Park.
+            This peaceful pathway lined with flags is likely located near Quezon Park, offering visitors a serene walk while paying homage to the country’s heritage. The flags fluttering in the wind are a powerful symbol of national pride, reminding us of the journey the Philippines has taken to become the nation it is today. It’s a space that encourages both reflection and appreciation for the history and beauty of the country.
           </p>
         </div>
       </div>
@@ -115,13 +117,9 @@ const Day3 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage
-            src={day37}
-            alt="Subic Bay Adventure Park"
-            effect="blur"
-          />
+          <LazyLoadImage src={day37} alt="President's Car" effect="blur" />
           <p className="image-description">
-          This image showcases one of the cars once used by a former president of the Philippines. The classic vehicle stands as a symbol of the country's political history, offering a glimpse into the past and the life of a leader.
+            A glimpse into the life of a former Philippine president is offered through this classic vehicle. Once used by the country's leader, this car stands as a symbol of political history, reminding visitors of the significant roles political figures play in shaping the nation. The car exudes a sense of nostalgia, allowing visitors to imagine the past and reflect on the legacy left behind by such leaders.
           </p>
         </div>
       </div>
@@ -132,9 +130,9 @@ const Day3 = () => {
 
       <div className="day-content">
         <div className="image-block">
-          <LazyLoadImage src={day38} alt="Subic Bay Sunset" effect="blur" />
+          <LazyLoadImage src={day38} alt="Sperm Whale Skeleton" effect="blur" />
           <p className="image-description">
-          This image features the skeleton of a sperm whale, displayed prominently inside the museum. The massive structure serves as a fascinating reminder of the ocean's vast and mysterious wildlife.
+            One of the most striking exhibits in the National Museum is the massive skeleton of a sperm whale, displayed in all its grandeur. The sheer size and complexity of this marine giant evoke a sense of awe, reminding us of the ocean’s mysterious and untamed beauty. The whale's skeletal remains offer a rare opportunity to connect with the natural world and reflect on the importance of conservation efforts to protect the earth's most incredible creatures.
           </p>
         </div>
       </div>

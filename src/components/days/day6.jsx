@@ -1,6 +1,4 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
-import React from "react";
 import day61 from "./dayimages/6-1.jpg";
 import day62 from "./dayimages/6-2.jpg";
 import day63 from "./dayimages/6-3.jpg";
@@ -10,8 +8,18 @@ import day66 from "./dayimages/6-6.jpg";
 import day67 from "./dayimages/6-7.jpg";
 import day68 from "./dayimages/6-8.jpg";
 import "./day.css";
+import { useParams, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
 
 const Day6 = () => {
+
+  const { day } = useParams();
+    const location = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location]);
+
   return (
     <div className="day-page">
       <div className="day-content">

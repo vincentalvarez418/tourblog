@@ -8,7 +8,7 @@ main {
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 60px);
-    padding-top: 60px; 
+    padding-top: 60px;
     box-sizing: border-box;
 }
 
@@ -23,7 +23,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    max-width: 1000px;
+    max-width: 1200px; 
     width: 100%;
     justify-items: center;
     box-sizing: border-box;
@@ -42,10 +42,13 @@ main {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s ease;
     height: 400px;
-    width: 250px;
+    width: 350px; 
     overflow: hidden;
     background: #f9f9f9;
     border: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .tour-day:hover {
@@ -55,15 +58,15 @@ main {
 }
 
 .tour-day h3 {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: bold;
     color: #333;
     margin-bottom: 15px;
 }
 
 .tour-image {
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px; 
     object-fit: cover;
     border-radius: 15px;
     margin-bottom: 15px;
@@ -89,10 +92,28 @@ main {
     .content-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .tour-day {
+        width: 350px; 
+    }
+
+    .tour-image {
+        width: 220px; 
+        height: 220px; 
+    }
 }
 
 @media (max-width: 600px) {
     .content-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tour-day {
+        width: 90%; 
+    }
+
+    .tour-image {
+        width: 250px; 
+        height: 250px; 
     }
 }
