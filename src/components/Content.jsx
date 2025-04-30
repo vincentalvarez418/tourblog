@@ -8,6 +8,7 @@ import day3 from "../resources/dayimages/day3.jpg";
 import day4 from "../resources/dayimages/day4.jpg";
 import day5 from "../resources/dayimages/day5.jpg";
 import day6 from "../resources/dayimages/day6.jpg";
+import day7 from "../resources/dayimages/day7.jpg";
 
 const tourDays = [
   { day: 1, title: "INTRODUCTION: MANILA", image: day1 },
@@ -15,7 +16,8 @@ const tourDays = [
   { day: 3, title: "TIME VAULT: PHILIPPINE RELICS", image: day3 },
   { day: 4, title: "ROBOTIC SOLUTIONS: HYTEC PH", image: day4 },
   { day: 5, title: "MANILA TRANSPORTAION FOUNDATIONS", image: day5 },
-  { day: 6, title: "STRAWBERRY CITY: BAGUIO", image: day6 }
+  { day: 6, title: "STRAWBERRY CITY: BAGUIO", image: day6 },
+  { day: 7, title: "FREE DAY: BAGUIO", image: day7 }
 ];
 
 

@@ -7,6 +7,7 @@ import Day3 from "./components/days/day3";
 import Day4 from "./components/days/day4";
 import Day5 from "./components/days/day5";
 import Day6 from "./components/days/day6";
+import Day7 from "./components/days/day7";
 import Navbar from "./components/Navbar";
 import Header from "./components/header";
 import "./App.css";
@@ -28,6 +29,7 @@ const Layout = () => {
             <Route path="/day4" element={<Day4 />} />
             <Route path="/day5" element={<Day5 />} />
             <Route path="/day6" element={<Day6 />} />
+            <Route path="/day7" element={<Day7 />} />
           </Routes>
         </div>
       </main>
