@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CalendarDays } from 'lucide-react'; 
 import "./Content.css";
 
 import day1 from "../resources/dayimages/day1.jpg";
@@ -20,7 +21,15 @@ const tourDays = [
   { day: 7, title: "FREE DAY: BAGUIO", image: day7 }
 ];
 
-
+const getDateString = (dayOffset) => {
+  const baseDate = new Date(2025, 3, 7);
+  baseDate.setDate(baseDate.getDate() + dayOffset);
+  return baseDate.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric'
+  });
+};
 
 const Content = () => {
   return (
@@ -31,6 +40,10 @@ const Content = () => {
             <div key={tour.day} className="tour-day">
               <h3>{tour.title}</h3>
               <img src={tour.image} alt={`Day ${tour.day}`} className="tour-image" />
+              <div className="tour-date flex items-center text-sm text-gray-700 dark:text-gray-300">
+                <CalendarDays size={18} className="inline-block mr-2 custom-calendar-icon" /> 
+                {getDateString(tour.day - 1)}
+              </div>
               <p>{tour.description}</p>
               <Link to={`/day${tour.day}`} className="learn-more">
                 VENTURE

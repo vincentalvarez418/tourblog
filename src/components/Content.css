@@ -56,6 +56,12 @@ main {
     border-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet) 1;
 }
 
+.custom-calendar-icon {
+    position: relative;
+    top: 3.5px;  
+    left: -5px;
+  }
+  
 
 .tour-day h3 {
     font-size: 15px;
