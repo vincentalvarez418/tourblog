@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { CalendarDays } from 'lucide-react'; 
 import "./Content.css";
 
-import day1 from "../resources/dayimages/day1.jpg";
-import day2 from "../resources/dayimages/day2.jpg";
-import day3 from "../resources/dayimages/day3.jpg";
-import day4 from "../resources/dayimages/day4.jpg";
-import day5 from "../resources/dayimages/day5.jpg";
-import day6 from "../resources/dayimages/day6.jpg";
-import day7 from "../resources/dayimages/day7.jpg";
+import day1 from "../resources/dayimages/1.jpg";
+import day2 from "../resources/dayimages/2.jpg";
+import day3 from "../resources/dayimages/3.jpg";
+import day4 from "../resources/dayimages/4.jpg";
+import day5 from "../resources/dayimages/5.jpg";
+import day6 from "../resources/dayimages/6.jpg";
+import day7 from "../resources/dayimages/7.jpg";
 
 const tourDays = [
   { day: 1, title: "INTRODUCTION: MANILA", image: day1 },
