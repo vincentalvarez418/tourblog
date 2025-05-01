@@ -12,14 +12,15 @@ import day6 from "../resources/dayimages/6.jpg";
 import day7 from "../resources/dayimages/7.jpg";
 
 const tourDays = [
-  { day: 1, title: "INTRODUCTION: MANILA", image: day1 },
-  { day: 2, title: "CITY OF BAYS: SUBIC BAY", image: day2 },
-  { day: 3, title: "TIME VAULT: PHILIPPINE RELICS", image: day3 },
-  { day: 4, title: "ROBOTIC SOLUTIONS: HYTEC PH", image: day4 },
-  { day: 5, title: "MANILA TRANSPORTAION FOUNDATIONS", image: day5 },
-  { day: 6, title: "STRAWBERRY CITY: BAGUIO", image: day6 },
-  { day: 7, title: "FREE DAY: BAGUIO", image: day7 }
+  { day: 1, title: "DAY 1: WELCOME MANILA", image: day1 },
+  { day: 2, title: "DAY 2: CITY OF BAYS - SUBIC BAY", image: day2 },
+  { day: 3, title: "DAY 3: TIME VAULT - NATIONAL MUSEUM", image: day3 },
+  { day: 4, title: "DAY 4: ROBOTIC SOLUTIONS - HYTEC PH", image: day4 },
+  { day: 5, title: "DAY 5: SPEED OF MANILA - LRT", image: day5 },
+  { day: 6, title: "DAY 6: STRAWBERRY CITY - BAGUIO", image: day6 },
+  { day: 7, title: "DAY 7: EPILOGUE", image: day7 }
 ];
+
 
 const getDateString = (dayOffset) => {
   const baseDate = new Date(2025, 3, 7);
