@@ -8,6 +8,7 @@ import Day4 from "./components/days/day4";
 import Day5 from "./components/days/day5";
 import Day6 from "./components/days/day6";
 import Day7 from "./components/days/day7";
+import RandomShots from "./components/days/RandomShots"; 
 import Navbar from "./components/Navbar";
 import Header from "./components/header";
 import "./App.css";
@@ -17,7 +18,7 @@ const Layout = () => {
 
   return (
     <div>
-      {location.pathname === "/" && <Header />} 
+      {location.pathname === "/" && <Header />}
       <Navbar />
       <main id="destinations" className="pt-20">
         <div className="main-content">
@@ -30,6 +31,7 @@ const Layout = () => {
             <Route path="/day5" element={<Day5 />} />
             <Route path="/day6" element={<Day6 />} />
             <Route path="/day7" element={<Day7 />} />
+            <Route path="/randomshots" element={<RandomShots />} /> 
           </Routes>
         </div>
       </main>
