@@ -11,6 +11,7 @@ import Day7 from "./components/days/day7";
 import RandomShots from "./components/days/RandomShots"; 
 import Navbar from "./components/Navbar";
 import Header from "./components/header";
+import Footer from "./components/Footer";
 import "./App.css";
 
 const Layout = () => {
@@ -35,6 +36,7 @@ const Layout = () => {
           </Routes>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

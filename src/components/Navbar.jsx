@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="nav-content">
           <div className="logo">
             <img src={iconLogo} alt="Logo" className="logo-icon" />
-            <span className="logo-text">EDUCATIONAL TOUR BLOG</span>
+            <span className="logo-text">The Manila Expedition</span>
           </div>
 
           <div className="nav-links">

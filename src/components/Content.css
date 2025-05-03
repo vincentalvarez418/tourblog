@@ -27,6 +27,7 @@ main {
     width: 100%;
     justify-items: center;
     box-sizing: border-box;
+    margin-bottom: 60px;
 }
 
 .tour-day {
@@ -51,10 +52,10 @@ main {
     justify-content: space-between;
 }
 
-
 .tour-day:hover {
-    border-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet) 1;
-}
+    border-image: linear-gradient(90deg, #2e0058, #9b00b3, #2e0058, #9b00b3, #2e0058, #9b00b3, #2e0058) 1;
+  }
+  
 
 .custom-calendar-icon {
     position: relative;
@@ -82,7 +83,7 @@ main {
 .learn-more {
     display: inline-block;
     padding: 12px 18px;
-    background: #007bff;
+    background: #2e0058;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -91,7 +92,7 @@ main {
 }
 
 .learn-more:hover {
-    background: #0056b3;
+    background: #1f003b;
 }
 
 @media (max-width: 900px) {
