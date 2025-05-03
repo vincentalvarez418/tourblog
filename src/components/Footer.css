@@ -1,0 +1,34 @@
+.custom-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #2e0058;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+  
+  .footer-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-container a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-container a:hover {
+    color: #0073e6;
+  }
+  
+  .footer-separator {
+    margin: 0 10px;
+  }
+  
+  .footer-note {
+    margin-left: 10px;
+    color: #ffffff;
+  }

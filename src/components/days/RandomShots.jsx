@@ -87,7 +87,7 @@ const Day7 = () => {
     <div className="day-page">
       <div className="day-content">
         <div className="text-right">
-          <h1>Random Shots</h1>
+          <h1>RANDOM SHOTS</h1>
           <hr />
           <br />
           <p>
@@ -100,9 +100,9 @@ const Day7 = () => {
       <hr />
       <br />
 
-      <div className="day-grid">
+      <div className="random-day-grid">
         {shots.map((img, index) => (
-          <div className="image-block" key={index}>
+          <div className="random-image-block" key={index}>
             <LazyLoadImage src={img.src} alt={`Random Shot ${index + 1}`} effect="blur" />
           </div>
         ))}
