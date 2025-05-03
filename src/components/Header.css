@@ -29,6 +29,48 @@
   margin-right: auto;
 }
 
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-image.blur {
+  filter: blur(20px);
+  transform: scale(1.05);
+  opacity: 1;
+  z-index: 1;
+}
+
+.header-image.full {
+  opacity: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.header-image.full.visible {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+
 @media (max-width: 767px) {
   .header {
     margin-top: 30%;
