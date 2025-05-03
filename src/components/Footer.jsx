@@ -1,4 +1,5 @@
 import React from "react";
+import { FaGithub, FaLinkedin, FaGlobe } from "react-icons/fa"; // Importing icons from react-icons
 import "./Footer.css";
 
 const Footer = () => {
@@ -10,27 +11,32 @@ const Footer = () => {
             href="https://github.com/vincentalvarez418"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub"
           >
-            GITHUB
+            <FaGithub size={24} />
+            <span className="footer-link-name">GitHub</span>
           </a>
           <span className="footer-separator">|</span>
           <a
             href="https://www.linkedin.com/in/vincent-anthony-alvarez-5a4b28359/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
-            LINKEDIN
+            <FaLinkedin size={24} />
+            <span className="footer-link-name">LinkedIn</span>
           </a>
           <span className="footer-separator">|</span>
           <a
             href="https://vincentalvarez.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Portfolio"
           >
-            PORTFOLIO
+            <FaGlobe size={24} />
+            <span className="footer-link-name">Portfolio</span>
           </a>
         </div>
-        <p className="footer-note">All Rights Reserved © Vincent Alvarez</p>
       </div>
     </footer>
   );

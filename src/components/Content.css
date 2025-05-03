@@ -137,6 +137,7 @@ main {
     .tour-day {
         width: 350px; 
         height: 420px !important;
+        border-radius: 15px !important;
     }
 
     .tour-image {
@@ -164,6 +165,7 @@ main {
     .tour-day {
         width: 110%; 
         height: 100%;
+        border-radius: 15px !important;
     }
 
     .tour-image {
