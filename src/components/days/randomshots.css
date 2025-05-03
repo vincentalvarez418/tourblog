@@ -1,30 +1,44 @@
 
-  .image-block img {
+  .random-image-block img {
     width: 300px !important;
     height: 300px !important;
     object-fit: cover !important; 
     border-radius: 10px;
   }
   
-  .image-description {
+  .random-image-description {
     display: none !important;
   }
   
-  .day-grid {
+  .random-day-grid {
     display: grid;
     gap: 20px;
     padding: 20px;
     justify-items: center;
   }
+
+  .random-image-block {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+  }
+  
+  .random-image-block:hover {
+    transform: scale(1.8);
+    z-index: 2;
+  }
+  
   
   @media (min-width: 1025px) {
-    .day-grid {
+    .random-day-grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   
   @media (max-width: 768px) {
-    .day-grid {
+    .random-day-grid {
       grid-template-columns: 1fr;
     }
   }
