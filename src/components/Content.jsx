@@ -11,14 +11,15 @@ import day5 from "../resources/dayimages/5.jpg";
 import day6 from "../resources/dayimages/6.jpg";
 import day7 from "../resources/dayimages/7.jpg";
 import random from "../resources/dayimages/randomshots.jpg"; 
+import AnimatedReveal from "./AnimatedReveal";
 
 const tourDays = [
   { day: 1, title: "DAY 1: WELCOME MANILA", image: day1 },
-  { day: 2, title: "DAY 2: CITY OF BAYS - SUBIC BAY", image: day2 },
-  { day: 3, title: "DAY 3: TIME VAULT - NATIONAL MUSEUM", image: day3 },
-  { day: 4, title: "DAY 4: ROBOTIC SOLUTIONS - HYTEC PH", image: day4 },
-  { day: 5, title: "DAY 5: SPEED OF MANILA - LRT", image: day5 },
-  { day: 6, title: "DAY 6: STRAWBERRY CITY - BAGUIO", image: day6 },
+  { day: 2, title: "DAY 2: CITY OF BAYS", image: day2 },
+  { day: 3, title: "DAY 3: TIME VAULT", image: day3 },
+  { day: 4, title: "DAY 4: ROBOTIC SOLUTIONS", image: day4 },
+  { day: 5, title: "DAY 5: SPEED OF MANILA", image: day5 },
+  { day: 6, title: "DAY 6: STRAWBERRY CITY", image: day6 },
   { day: 7, title: "DAY 7: EPILOGUE", image: day7 },
   {
     day: 8,
@@ -38,28 +39,39 @@ const getDateString = (dayOffset) => {
   });
 };
 
+const TourCard = ({ day, title, image, dateOverride }) => (
+  <div className="tour-day">
+    <img src={image} alt={`Day ${day}`} className="tour-image" />
+    <div className="tour-date flex items-center text-sm text-[#e0e0e0]">
+      <CalendarDays size={18} className="inline-block mr-2 custom-calendar-icon" />
+      {dateOverride || getDateString(day - 1)}
+    </div>
+    <Link to={day === 8 ? `/randomshots` : `/day${day}`} className="learn-more">
+      VENTURE
+    </Link>
+  </div>
+);
+
 const Content = () => {
   return (
     <div className="outer-container">
       <div className="content-wrapper">
         <div className="content-container">
-          {tourDays.map((tour) => (
-            <div key={tour.day} className="tour-day">
-              <h3>{tour.title}</h3>
-              <img src={tour.image} alt={`Day ${tour.day}`} className="tour-image" />
-              <div className="tour-date flex items-center text-sm text-gray-700 dark:text-gray-300">
-                <CalendarDays size={18} className="inline-block mr-2 custom-calendar-icon" />
-                {tour.dateOverride || getDateString(tour.day - 1)}
+          {tourDays.map((tour, index) => (
+            <AnimatedReveal key={tour.day} index={index}>
+              <div className="tour-block">
+                <div className="tour-header">
+                  <h3 className="tour-title">{tour.title}</h3>
+                </div>
+                <TourCard {...tour} />
               </div>
-              <Link to={tour.day === 8 ? `/randomshots` : `/day${tour.day}`} className="learn-more">
-                VENTURE
-              </Link>
-            </div>
+            </AnimatedReveal>
           ))}
         </div>
       </div>
     </div>
   );
 };
+
 
 export default Content;

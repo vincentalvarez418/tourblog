@@ -1,21 +1,22 @@
 .custom-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background-color: #2e0058;
-    color: #ffffff;
-    font-size: 14px;
-    margin-top: 30px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #d0cfcf;
+  color: #ffffff;
+  font-size: 14px;
+  border-top: 2px solid #436c60;
+  margin-top: 30px;
+}
+
   .footer-container {
     display: flex;
     align-items: center;
   }
   
   .footer-container a {
-    color: #ffffff;
+    color: #2a2a2a;
     text-decoration: none;
     margin: 0 10px;
   }
@@ -26,9 +27,21 @@
   
   .footer-separator {
     margin: 0 10px;
+    color: #2a2a2a;
   }
   
   .footer-note {
     margin-left: 10px;
-    color: #ffffff;
+    color: #303030;
+  }
+
+  @media (max-width: 600px) {
+    .footer-container {
+      flex-direction: column;
+    }
+  
+    .footer-note {
+      margin-left: 0;
+      margin-top: 15px;
+    }
   }

@@ -8,9 +8,22 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f0f0f0;
+  background-color: #1d1d1d;
   color: #333;
+  background-image: url('./assets/alter.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+@media (max-width: 768px) {
+  body {
+    background-image: url('./assets/mobile.jpg');
+    background-size: cover;
+  }
+}
+
 
 body::-webkit-scrollbar {
   display: none;

@@ -34,7 +34,7 @@ const Day3 = () => {
       </div>
 
       <br />
-      <hr />
+
       <br />
 
       <div className="day-content">
@@ -47,7 +47,7 @@ const Day3 = () => {
       </div>
 
       <br />
-      <hr />
+
       <br />
 
       <div className="day-content">
@@ -60,7 +60,7 @@ const Day3 = () => {
       </div>
 
       <br />
-      <hr />
+   
       <br />
 
       <div className="day-content">
@@ -73,7 +73,7 @@ const Day3 = () => {
       </div>
 
       <br />
-      <hr />
+  
       <br />
 
       <div className="day-content">
@@ -86,7 +86,7 @@ const Day3 = () => {
       </div>
 
       <br />
-      <hr />
+  
       <br />
 
       <div className="day-content">
@@ -99,7 +99,7 @@ const Day3 = () => {
       </div>
 
       <br />
-      <hr />
+   
       <br />
 
       <div className="day-content">
@@ -112,7 +112,7 @@ const Day3 = () => {
       </div>
 
       <br />
-      <hr />
+
       <br />
 
       <div className="day-content">
@@ -125,7 +125,6 @@ const Day3 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">

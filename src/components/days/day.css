@@ -5,6 +5,7 @@
     padding: 40px 20px;
     font-family: Arial, sans-serif;
     text-align: center;
+    color: #1a1a1a;
   }
   
   .day-content {
@@ -46,6 +47,21 @@
     margin-top: 10px;
     font-size: 14px; 
     line-height: 1.5;
-    color: #333; 
+    color: #040404; 
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .day-page {
+    animation: fadeIn 0.8s ease-in-out;
   }
   
