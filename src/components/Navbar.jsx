@@ -25,14 +25,27 @@ export default function Navbar() {
     });
   };
   
+  const handleLogoClick = () => {
+    const logo = document.querySelector(".logo-icon");
+    if (logo) {
+      logo.classList.add("bus-drive");
+      setTimeout(() => {
+        logo.classList.remove("bus-drive");
+      }, 1200);
+    }
+  };
+  
 
   return (
     <nav className="navbar">
       <div className="container">
         <div className="nav-content">
           <div className="logo">
+          <div className="logo" onClick={handleLogoClick}>
             <img src={iconLogo} alt="Logo" className="logo-icon" />
             <span className="logo-text">The Manila Expedition</span>
+          </div>
+           
           </div>
 
           <div className="nav-links">

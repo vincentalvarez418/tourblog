@@ -31,7 +31,7 @@ main {
 }
 
 .tour-date {
-    color: #232323;
+    color: #ffffff;
   }
 
   
@@ -48,7 +48,7 @@ main {
     height: 450px;
     width: 350px; 
     overflow: hidden;
-    background: #3333337c;
+    background: #0101018a;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -135,9 +135,10 @@ main {
     
 
     .tour-day {
-        width: 350px; 
+        width: 380px; 
         height: 420px !important;
-        border-radius: 15px !important;
+        border-bottom-left-radius: 15px !important;
+        border-bottom-right-radius: 15px !important;
     }
 
     .tour-image {
@@ -163,9 +164,10 @@ main {
     }
 
     .tour-day {
-        width: 110%; 
-        height: 100%;
-        border-radius: 15px !important;
+        width: 350px; 
+        height: auto;
+        border-bottom-left-radius: 15px !important;
+        border-bottom-right-radius: 15px !important;
     }
 
     .tour-image {
