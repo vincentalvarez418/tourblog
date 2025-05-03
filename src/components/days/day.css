@@ -16,6 +16,7 @@
   
   .text-right h1,
   .text-left h1 {
+    margin-top: 25px;
     font-size: 2.5rem;
     margin-bottom: 10px;
   }
@@ -30,22 +31,24 @@
   }
   
   .image-block img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 20px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s ease; 
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
   
   .image-block img:hover {
-    transform: scale(1.2); 
+    transform: scale(1.24); 
   }
   
   .image-description {
     word-wrap: break-word;
     white-space: normal;
     margin-top: 10px;
-    font-size: 14px; 
+    font-size: 18px; 
     line-height: 1.5;
     color: #040404; 
   }
@@ -63,5 +66,33 @@
   
   .day-page {
     animation: fadeIn 0.8s ease-in-out;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .day-page {
+      padding: 20px 10px;
+    }
+  
+    .text-right h1,
+    .text-left h1 {
+      font-size: 2rem;
+    }
+  
+    .text-left p {
+      font-size: 1rem;
+    }
+  
+    .image-block img {
+      max-width: 90%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+  
+    .image-description {
+      font-size: 15px;
+      line-height: 1.4;
+    }
   }
   
