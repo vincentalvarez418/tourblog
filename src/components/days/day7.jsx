@@ -31,7 +31,6 @@ const Day7 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">
@@ -44,7 +43,6 @@ const Day7 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">
@@ -57,7 +55,6 @@ const Day7 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">
@@ -70,7 +67,6 @@ const Day7 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">
@@ -83,7 +79,6 @@ const Day7 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">

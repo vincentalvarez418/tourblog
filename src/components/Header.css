@@ -21,7 +21,7 @@
 
 .header p {
   font-size: 1rem;
-  color: #555;
+  color: #0c0c0c;
   margin-top: 20px;
   line-height: 1.6;  
   max-width: 1000px;  
@@ -41,4 +41,23 @@
   .header p {
     margin-top: 30px;
   }
+
+  .header-image:hover {
+    transform: scale(1.10) !important;
+  }
+  
+}
+
+
+.header-image {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.header-image:hover {
+  transform: scale(1.05);
+}
+
+.header-image:active {
+  transform: scale(1.05);
 }

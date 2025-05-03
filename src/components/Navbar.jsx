@@ -13,10 +13,18 @@ export default function Navbar() {
   const handleHomeClick = () => {
     window.scrollTo(0, 0);
   };
-
+  
   const handleDestinationsClick = () => {
-    window.scrollTo(0, 0);
+    handleScrollToTop();
   };
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", 
+    });
+  };
+  
 
   return (
     <nav className="navbar">

@@ -7,6 +7,7 @@ import day15 from "./dayimages/1-5.jpg";
 import day16 from "./dayimages/1-6.jpg";
 import day17 from "./dayimages/1-7.jpg";
 import day18 from "./dayimages/1-8.jpg";
+import AnimatedReveal from "../AnimatedReveal";
 import "./day.css";
 
 import { useParams, useLocation } from "react-router-dom";
@@ -23,6 +24,7 @@ const Day1 = () => {
 
   return (
     <div className="day-page">
+      <AnimatedReveal index={0}></AnimatedReveal>
       <div className="day-content">
         <div className="text-right">
           <h1>Introduction: Manila</h1>
@@ -54,7 +56,6 @@ const Day1 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">
@@ -73,7 +74,6 @@ const Day1 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">
@@ -92,7 +92,6 @@ const Day1 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">
@@ -111,7 +110,6 @@ const Day1 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">
@@ -130,7 +128,6 @@ const Day1 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">
@@ -149,7 +146,6 @@ const Day1 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">
@@ -168,7 +164,6 @@ const Day1 = () => {
       </div>
 
       <br />
-      <hr />
       <br />
 
       <div className="day-content">
