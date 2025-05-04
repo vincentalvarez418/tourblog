@@ -11,8 +11,12 @@ export default function Navbar() {
   const location = useLocation();
 
   const handleHomeClick = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
+  
   
   const handleDestinationsClick = () => {
     handleScrollToTop();
@@ -24,6 +28,16 @@ export default function Navbar() {
       behavior: "smooth", 
     });
   };
+  
+
+  const handleSmoothScroll = () => {
+    const el = document.getElementById("destinations");
+    const yOffset = -window.innerHeight * 0.1;
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   
   const handleLogoClick = () => {
     const logo = document.querySelector(".logo-icon");
@@ -54,9 +68,9 @@ export default function Navbar() {
           </Link>
 
           {location.pathname === "/" ? (
-            <a href="#destinations">
+            <button onClick={handleSmoothScroll} className="icon-button">
               <img src={destinationsIcon} alt="Destinations" className="nav-icon nav-destination" />
-            </a>
+            </button>
           ) : (
             <button onClick={handleDestinationsClick} className="icon-button">
               <img src={arrowIcon} alt="Scroll to top" className="nav-icon nav-arrow" />
