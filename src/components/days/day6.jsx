@@ -7,129 +7,113 @@ import day65 from "./dayimages/6-5.jpg";
 import day66 from "./dayimages/6-6.jpg";
 import day67 from "./dayimages/6-7.jpg";
 import day68 from "./dayimages/6-8.jpg";
+import profile from "./dayimages/images/profile.png";
+import AnimatedReveal from "../AnimatedReveal";
+import { FaThumbsUp, FaHeart, FaShareAlt } from 'react-icons/fa';
 import "./day.css";
+
 import { useParams, useLocation } from "react-router-dom";
 import React, { useEffect } from "react";
 
 const Day6 = () => {
-
   const { day } = useParams();
-    const location = useLocation();
-  
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, [location]);
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  const images = [
+    {
+      src: day61,
+      alt: "View of Baguio",
+      desc: "Perched high in the Cordillera mountains, this view of Baguio showcases the city's signature cool mist blanketing its vibrant urban sprawl. The sharp outlines of the distant hills contrast beautifully with the scattered homes, creating a canvas that is both serene and alive. It's the kind of morning view that makes you stop, breathe deep, and smile without reason."
+    },
+    {
+      src: day62,
+      alt: "Indigenous Tribes and Horses",
+      desc: "Baguio’s spirit comes alive through its indigenous roots — from vibrant tribal garments to the lively presence of ponies decorated for tourists. This cultural fusion allows you to walk through history while engaging with the present, a rare glimpse into the traditions that have shaped the region for generations."
+    },
+    {
+      src: day63,
+      alt: "Loyalty Statue at PMA",
+      desc: "Standing tall within the Philippine Military Academy grounds, the Loyalty Statue commands attention and respect. It’s more than a sculpture — it’s a symbol of unwavering service, sacrifice, and the deep honor instilled in every cadet. Surrounded by rolling lawns and disciplined calm, it offers a powerful reminder of national pride and courage."
+    },
+    {
+      src: day64,
+      alt: "PMA Airplanes Display",
+      desc: "This lineup of retired aircraft on PMA grounds showcases more than just aviation engineering — each plane carries stories of missions flown, skies conquered, and peace maintained. It's like a walk through a metallic museum of air force legacy, stirring both awe and curiosity."
+    },
+    {
+      src: day65,
+      alt: "Melchor Hall at PMA",
+      desc: "Melchor Hall stands as a historic sentinel of the academy — bold, structured, and grounded in tradition. Built in 1949, its weathered stone walls and rigid symmetry reflect the discipline of the institution, while the Philippine flag flutters proudly above as a beacon of honor."
+    },
+    {
+      src: day66,
+      alt: "Bell Tower View",
+      desc: "From the Bell Tower’s perch, Baguio’s patchwork of rooftops blends with the greens of pine trees and ridges that stretch into misty horizons. It’s the kind of scene that makes you reflect — a quiet, contemplative snapshot of city and nature embracing each other."
+    },
+    {
+      src: day67,
+      alt: "Bell Tower Pathway",
+      desc: "Winding its way toward the Bell Tower, this stone-lined path feels like something from a storybook — shaded by trees, dotted with flowers, and cloaked in a calm that hushes every footstep. It's where every moment feels unhurried, and every breath seems fresher than the last."
+    },
+    {
+      src: day68,
+      alt: "Strawberry Farm Sunrise",
+      desc: "As the sun rises over the strawberry fields of La Trinidad, a soft golden hue kisses the earth and dew sparkles like morning gems. The scent of ripe fruit hangs in the air while farmers begin their harvest — a peaceful, postcard-perfect start to a day in the Strawberry Capital of the Philippines."
+    }
+  ];
 
   return (
     <div className="day-page">
+      <AnimatedReveal index={0} />
       <div className="day-content">
         <div className="text-right">
           <h1>Strawberry City: Baguio</h1>
           <hr />
           <br />
           <p>
-          Baguio, often called the "Summer Capital of the Philippines," is a scenic city nestled in the mountains of the Cordillera region. Known for its cool climate and lush landscapes, Baguio attracts tourists year-round. The city is famous for its vibrant strawberry farming industry, which is why it is lovingly called "Strawberry City." This nickname highlights the city's long history of strawberry cultivation, especially in nearby La Trinidad, where the fields bloom with strawberries in vibrant hues during the harvest season.
+            Baguio, often called the "Summer Capital of the Philippines," is a scenic city nestled in the mountains of the Cordillera region. Known for its cool climate and lush landscapes, Baguio attracts tourists year-round. The city is famous for its vibrant strawberry farming industry, especially in nearby La Trinidad. The fields bloom with strawberries in vibrant hues during harvest, giving Baguio its sweet nickname — "Strawberry City."
           </p>
         </div>
       </div>
 
-      <br />
-      <br />
-
-      <div className="day-content">
-        <div className="image-block">
-          <LazyLoadImage src={day61} alt="Hytec Electrical Setup" effect="blur" />
-          <p className="image-description">
-          The image shows a picturesque view of Baguio City, with the majestic mountains forming a backdrop to the sprawling urban houses nestled on the hillside. The vibrant greenery of the mountains contrasts beautifully with the rooftops of the homes, which are scattered across the terrain. The city’s unique blend of urban and natural landscapes is evident, as the houses are perched in varying elevations, showcasing the natural topography of the area. The cool mist and fresh air from the mountains further enhance the scenic beauty, encapsulating the essence of Baguio as a city surrounded by nature yet filled with the bustling energy of urban life.
-          </p>
+      {images.map((item, index) => (
+        <div className="day-content" key={index}>
+          <div className="image-block">
+            <LazyLoadImage
+              src={item.src}
+              alt={item.alt}
+              effect="blur"
+              height="auto"
+              width="100%"
+            />
+            <div className="comment-block left">
+              <img src={profile} alt="Guide" className="profile-pic" />
+              <div className="comment-bubble">
+                <p>{item.desc}</p>
+                <div className="social-buttons">
+                  <button className="social-button like-button">
+                    <FaThumbsUp size={20} />
+                    <span>25K Likes</span>
+                  </button>
+                  <button className="social-button heart-button">
+                    <FaHeart size={20} />
+                    <span>30K Hearts</span>
+                  </button>
+                  <button className="social-button share-button">
+                    <FaShareAlt size={20} />
+                    <span>27K Shares</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr className="post-hr" />
         </div>
-      </div>
-
-      <br />
-      <br />
-
-      <div className="day-content">
-        <div className="image-block">
-          <LazyLoadImage src={day62} alt="Hytec PC Console" effect="blur" />
-          <p className="image-description">
-          The image showcases a vibrant display of indigenous tribes in Baguio, with local tribes offering an immersive cultural experience for tourists. The scene features tribal members dressed in traditional attire, demonstrating their customs and practices. In the foreground, horses are prominently featured as a major tourist attraction, allowing visitors to interact with them, take rides, and learn about their significance in the tribe's heritage. The horses, often used in the region for transportation and ceremonial purposes, add to the charm of the cultural showcase.
-          </p>
-        </div>
-      </div>
-
-      <br />
-      <br />
-
-      <div className="day-content">
-        <div className="image-block">
-          <LazyLoadImage src={day63} alt="Hytec Voltage Monitor" effect="blur" />
-          <p className="image-description">
-          The image features the Loyalty Statue located within the Philippine Military Academy (PMA) in Baguio City. The statue is a significant landmark, symbolizing the values of honor, duty, and loyalty upheld by the academy.
-          </p>
-        </div>
-      </div>
-
-      <br />
-      <br />
-
-      <div className="day-content">
-        <div className="image-block">
-          <LazyLoadImage src={day64} alt="Hytec Modules" effect="blur" />
-          <p className="image-description">
-          The image showcases various military airplanes displayed within the Philippine Military Academy (PMA) camp in Baguio City. These aircraft are part of an exhibit that highlights the history and development of the Philippine aviation industry. The planes, often retired or decommissioned, are displayed as a tribute to the country’s aviation milestones.
-          </p>
-        </div>
-      </div>
-
-      <br />
-      <br />
-
-      <div className="day-content">
-        <div className="image-block">
-          <LazyLoadImage src={day65} alt="Hytec Electrical Trainer" effect="blur" />
-          <p className="image-description">
-          The image presents a frontal view of Melchor Hall, the oldest academic building at the Philippine Military Academy (PMA) in Baguio City. Completed in 1949, it was designated a National Historical Landmark by the National Historical Commission of the Philippines on May 21, 2019. ​
-          The building's façade is characterized by its clean white walls, symmetrical design, and classical architectural elements. A prominent feature is the inscription "PHILIPPINE MILITARY ACADEMY" above the entrance, flanked by sculpted figures representing the academy's values.
-          </p>
-        </div>
-      </div>
-
-      <br />
-      <br />
-
-      <div className="day-content">
-        <div className="image-block">
-          <LazyLoadImage src={day66} alt="Hytec Medical Devices" effect="blur" />
-          <p className="image-description">
-          The image shows a stunning panoramic view from the Bell Tower in Baguio City, showcasing the unique blend of urban housing and the surrounding mountainous landscape. From this vantage point, you can see the densely packed houses scattered across the hilly terrain, typical of Baguio's urban sprawl. The vibrant greenery of the mountains contrasts beautifully with the structures below, highlighting the city's position amidst nature. The misty, cool climate often gives the mountains a hazy, serene look, enhancing the view's peaceful and picturesque atmosphere. The Bell Tower itself stands as a historical landmark, adding a cultural touch to the scenic view of Baguio's natural beauty.
-          </p>
-        </div>
-      </div>
-
-      <br />
-
-      <br />
-
-      <div className="day-content">
-        <div className="image-block">
-          <LazyLoadImage src={day67} alt="Hytec LAN Trainer" effect="blur" />
-          <p className="image-description">
-          The image shows a view from above the Bell Tower, looking down the pathway that leads visitors to the top. The pathway is lined with steps and flanked by lush greenery, adding to the natural beauty of the area. The climb offers a gradual ascent through the scenic surroundings, with trees and plants adding to the fresh, cool atmosphere typical of Baguio. From this perspective, the pathway appears winding and serene, leading to the tower’s elevated position that offers a sweeping view of the city and the mountains beyond. The perspective emphasizes both the effort of reaching the top and the reward of the breathtaking view that awaits.
-          </p>
-        </div>
-      </div>
-
-      <br />
-      <br />
-
-      <div className="day-content">
-        <div className="image-block">
-          <LazyLoadImage src={day68} alt="Hytec Weather Machine" effect="blur" />
-          <p className="image-description">
-          The image captures the early morning sunrise, casting a warm golden glow over the landscape. The path ahead leads towards the famous strawberry farm in Baguio, with the soft light highlighting the lush, green fields. The atmosphere is calm and peaceful, as the first rays of the sun illuminate the surrounding mountains and valleys. This serene scene reflects the promise of a day filled with the excitement of visiting the strawberry farm, where visitors can enjoy the fresh air, vibrant colors, and the experience of picking strawberries. The sunrise adds a sense of tranquility, setting the perfect mood for a visit to the farm.
-          </p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

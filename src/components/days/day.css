@@ -53,6 +53,179 @@
     color: #040404; 
   }
   
+  .comment-block {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    max-width: 90%;
+    animation: popIn 0.4s ease;
+    position: relative;
+  }
+  
+  .comment-block.left {
+    flex-direction: row;
+  }
+  
+  .comment-block.right {
+    flex-direction: row-reverse;
+  }
+  
+  .profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 15px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+  
+  .comment-bubble {
+    background: #fefefe;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    position: relative;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    z-index: 1;
+  }
+  
+  .comment-bubble::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    width: 0;
+    height: 0;
+  }
+  
+  .comment-block.left .comment-bubble::before {
+    left: -15px;
+    border: 10px solid transparent;
+    border-right-color: #fefefe;
+  }
+  
+  .comment-block.right .comment-bubble::before {
+    right: -15px;
+    border: 10px solid transparent;
+    border-left-color: #fefefe;
+  }
+
+  hr.post-hr {
+    margin-top: 90px;
+    margin-bottom: 20px;
+    border: none;
+    border-top: 3px solid #3d3d3d;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+  }
+  
+  hr.post-hr:hover {
+    opacity: 1;
+  }
+
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+  }
+  
+  .social-button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 35px;
+  }
+  
+  .like-button {
+    color: #007bff;
+  }
+  
+  .heart-button {
+    color: #ff4d4d;
+  }
+  
+  .share-button {
+    color: #333;
+  }
+  
+  .social-button span {
+    margin-left: 8px;
+  }
+  
+  .social-button:hover {
+    color: goldenrod;
+  }
+  
+  .social-button:active {
+    color: inherit;
+  }
+
+  @media (max-width: 768px) {
+    .social-buttons {
+      gap: 15px;
+    }
+  
+    .social-button {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .social-buttons {
+      gap: 10px;
+      justify-content: space-around;
+    }
+  
+    .social-button {
+      font-size: 12px;
+      margin-top: 15px;
+    }
+  }
+  
+  
+  
+  @media screen and (max-width: 768px) {
+    .comment-bubble {
+      font-size: 12.2px;
+      width: 100%;
+      max-width: 450px !important;
+      margin-left: 15px;
+
+  }
+
+    .profile-pic {
+      border-radius: 50%;
+      margin: 0px !important;
+      margin-right: 15px !important;
+      margin-left: -5px !important;
+    }
+        
+  }
+
+  
+
+  
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95) translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
