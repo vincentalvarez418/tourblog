@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <br />
       <p>
-        Departing Zamboanga at night, our group excitedly boards the plane to Manila, ready for the Educational Tour.
+      It was already night when we left Zamboanga. Our whole group was excited as we boarded the plane to Manila. Everyone was in a good mood — some were laughing, some were quietly smiling. You could really feel the excitement in the air. We were all set for our Educational Tour, ready to explore, learn, and create unforgettable memories together.
       </p>
     </header>
   );
