@@ -40,9 +40,6 @@
     margin-top: 20px;
   }
   
-  .image-block img:hover {
-    transform: scale(1.24); 
-  }
   
   .image-description {
     word-wrap: break-word;
@@ -152,16 +149,12 @@
     color: #ff4d4d;
   }
   
-  .share-button {
-    color: #333;
-  }
-  
   .social-button span {
     margin-left: 8px;
   }
   
   .social-button:hover {
-    color: goldenrod;
+    color: #34005a;
   }
   
   .social-button:active {

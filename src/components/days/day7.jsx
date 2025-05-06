@@ -85,10 +85,6 @@ const Day7 = () => {
                     <FaHeart size={20} />
                     <span>30K Hearts</span>
                   </button>
-                  <button className="social-button share-button">
-                    <FaShareAlt size={20} />
-                    <span>27K Shares</span>
-                  </button>
                 </div>
               </div>
             </div>
